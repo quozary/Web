@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Каталог автомобилей";
+}
+
+<h1 class="catalog-title">Каталог автомобилей</h1>
+
+<div class="catalog-container">
+    @foreach (var car in Model)
+    {
+        <div class="catalog-card">
+            <img src="@car.ImageUrl" alt="@car.Name" class="car-image">
+            <div class="car-info">
+                <h2>@car.Name (@car.Model)</h2>
+                <p><strong>Цена:</strong> @car.Price ₽</p>
+                <p><strong>Характеристики:</strong> @car.Description</p>
+                <p><strong>Год выпуска:</strong> @car.Year</p>
+                <p><strong>Пробег:</strong> @car.Mileage км</p>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    body {
+        font-family: 'Roboto Flex', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #1E1E1E;
+        color: #D1D1D1;
+    }
+
+    .catalog-title {
+        text-align: center;
+        font-size: 3em;
+        font-weight: 700;
+        color: #4A90E2;
+        margin: 20px 0;
+    }
+
+    .catalog-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .catalog-card {
+        background-color: #2C2C2C;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        width: 300px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .catalog-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+    .car-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .car-info {
+        padding: 15px;
+    }
+
+        .car-info h2 {
+            font-size: 1.5em;
+            color: #6FCF97;
+            margin-bottom: 10px;
+        }
+
+        .car-info p {
+            font-size: 1em;
+            line-height: 1.5;
+            margin: 5px 0;
+        }
+
+            .car-info p strong {
+                color: #4A90E2;
+            }
+</style>

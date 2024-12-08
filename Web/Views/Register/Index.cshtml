@@ -1,0 +1,9 @@
+﻿<h1>Регистрация</h1>
+<form method="post" asp-action="Submit">
+    <label>Имя:</label>
+    <input type="text" name="name" required />
+    <label>Email:</label>
+    <input type="email" name="email" required />
+    <button type="submit">Зарегистрироваться</button>
+</form>
+<p>@ViewBag.Message</p>

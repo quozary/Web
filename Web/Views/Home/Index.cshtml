@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Главная";
+}
+
+<h1 class="main-title">Gaechka General</h1>
+
+<div class="welcome-container">
+    <div class="welcome-text">
+        <h2>Добро пожаловать в автосалон "Гаечка"!</h2>
+        <p>
+            Мы рады видеть вас в нашем веб-приложении, где вы найдете всё для комфортного выбора и покупки автомобиля вашей мечты.
+        </p>
+        <p><strong>Почему выбирают нас?</strong></p>
+        <ul>
+            <li><strong>🚗 Широкий ассортимент автомобилей.</strong> Более 12 моделей от ведущих мировых брендов, включая Audi, Toyota, Mercedes, Lada и другие.</li>
+            <li><strong>💼 Надежные партнеры.</strong> Мы работаем только с проверенными дилерами, чтобы вы могли быть уверены в качестве каждого авто.</li>
+            <li><strong>💰 Выгодные условия.</strong> Специальные предложения, акции и гибкие программы кредитования.</li>
+            <li><strong>🛠️ Полный спектр услуг.</strong> Продажа, сервисное обслуживание, страхование и консультации.</li>
+        </ul>
+        <p><strong>С нами дорога всегда начинается легко!</strong></p>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;500;700&display=swap">
+<style>
+    /* Основные стили для страницы */
+    body {
+        font-family: 'Roboto Flex', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #1E1E1E;
+        color: #D1D1D1;
+    }
+
+    .main-title {
+        text-align: center;
+        font-size: 3em;
+        font-weight: 700;
+        color: #4A90E2;
+        margin-top: 30px;
+    }
+
+    .welcome-container {
+        max-width: 1200px;
+        margin: 40px auto;
+        background-color: #2C2C2C;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .welcome-text h2 {
+        font-size: 2em;
+        color: #6FCF97;
+        margin-bottom: 20px;
+    }
+
+    .welcome-text p {
+        font-size: 1.2em;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .welcome-text ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    .welcome-text ul li {
+        margin-bottom: 15px;
+        font-size: 1.2em;
+    }
+
+    .welcome-text ul li::before {
+        content: '•';
+        color: #4A90E2;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+</style>
+

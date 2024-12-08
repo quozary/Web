@@ -1,0 +1,64 @@
+﻿@model List<ProjectName.Models.Dealer>
+
+<h1>Наши дилеры</h1>
+
+<div class="dealer-list">
+    @foreach (var dealer in Model)
+    {
+        <div class="dealer-item">
+            <img src="@dealer.LogoUrl" alt="@dealer.Name Logo" class="dealer-logo">
+            <div class="dealer-info">
+                <h2>@dealer.Name</h2>
+                <p>@dealer.Description</p>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .dealer-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .dealer-item {
+        display: flex;
+        align-items: center;
+        background: #2C2C2C;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        max-width: 400px;
+        width: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .dealer-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .dealer-logo {
+        width: 100px;
+        height: auto;
+        margin-right: 20px;
+        border-radius: 5px;
+    }
+
+    .dealer-info {
+        color: #D1D1D1;
+    }
+
+    .dealer-info h2 {
+        margin: 0 0 10px;
+        font-size: 1.5em;
+        color: #4A90E2;
+    }
+
+    .dealer-info p {
+        margin: 0;
+        font-size: 1em;
+    }
+</style>

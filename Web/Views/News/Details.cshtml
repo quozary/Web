@@ -1,0 +1,39 @@
+﻿@model ProjectName.Models.News
+
+<h1 class="details-title">@Model.Title</h1>
+
+<div class="details-container">
+    <img src="@Model.ImageUrl" alt="@Model.Title" class="details-image">
+    <p class="details-text">@Model.FullDescription</p>
+</div>
+
+<style>
+    .details-title {
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: 700;
+        color: #4A90E2;
+        margin-top: 20px;
+    }
+
+    .details-container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #2C2C2C;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .details-image {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .details-text {
+        font-size: 1.2em;
+        line-height: 1.8;
+        color: #D1D1D1;
+    }
+</style>
